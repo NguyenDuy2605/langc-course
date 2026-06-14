@@ -1,6 +1,8 @@
 from dotenv import load_dotenv
-from langchain_core import __version__ as core_version
-from langgraph import version as graph_version
+from importlib.metadata import version
+core_version = version("langchain_core")
+graph_version = version("langgraph")
+
 from langchain_anthropic import ChatAnthropic
 
 #print(f"Langchain core version: {core_version}")
